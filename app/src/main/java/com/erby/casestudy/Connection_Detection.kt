@@ -14,6 +14,6 @@ class Connection_Detection { // the name of this class is Connection_Detection
     fun isConnected() { 
         val connectivityManager = context?.getSystemService(Service.CONNECTIVITY_SERVICE) as ConnectivityManager
        
-    }
+    } // under the isConnected() method is to get if the  
 
 }
