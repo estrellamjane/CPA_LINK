@@ -83,14 +83,14 @@ class MainActivity : AppCompatActivity() {
                     })
 
 
-        } else {//execute error message
+        } //else if(!isEmail()){//execute error message
             //password.setError(getString(R.string.err_pass))
-            texinemail.error = getString(R.string.err_email)
-            texinpass.error = getString(R.string.err_pass)
+           // texinemail.error = getString(R.string.err_email)
+            //texinpass.error = getString(R.string.err_pass)
             //emailaddress.setText(Html.fromHtml("7<sup>2</sup>")) exponent mode
+            return
 
-
-        }
+        //}
 
     }
 
@@ -113,6 +113,37 @@ class MainActivity : AppCompatActivity() {
                 .setTitleText("Check your email for verification ..")
                 .show()
     }
+
+
+    private fun isEmail():Boolean {
+
+        val password = password.text.toString()
+        val email = emailaddress.text.toString()
+        if(email.isEmpty()){
+            texinemail.error = getString(R.string.err_email)
+            emailaddress.requestFocus()
+            return false
+        }
+        else{
+            texinemail.isErrorEnabled = false
+            return true
+
+        }
+    }
+    private fun isPassword():Boolean {
+        val password = password.text.toString()
+        if(password.isEmpty()){
+            texinpass.error = getString(R.string.err_pass)
+          ///  password.requestFocus()
+            return false
+        }
+        else{
+            texinpass.isErrorEnabled = false
+            return true
+
+        }
+    }
+
 
 
 

@@ -6,10 +6,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_jobs"
-            android:title="Post Jobs" />
-        <item
-            android:id="@+id/nav_people"
-            android:title="Search People" />
+            android:title="Jobs" />
         <item
             android:id="@+id/nav_transaction"
             android:title="Transaction" />

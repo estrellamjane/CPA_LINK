@@ -87,9 +87,6 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_jobs -> {
                 // Handle the camera action
             }
-            R.id.nav_people -> {
-
-            }
             R.id.nav_transaction -> {
 
             }
