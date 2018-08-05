@@ -1,6 +1,13 @@
 package com.erby.casestudy
 
-import android.app.ProgressDialog
+//In Layers of Programming Language, merong Machine, Assembly, High-Level and Low-Level Programming Language
+//Ang High Level Programming Language ay ginagamit para sa pagbuo ng program,
+//ang halimbawa nito ay C++, C#, JAVA, C, Visual Basic, and J#.
+//Habang ang low-level programming language naman ay ginagamit sa pagddesign.
+//Machine Language ay ang standard language na ginagamit ng computer upang magprocess ng mga data, ito ay ang binary.
+//Assembly naman ang kombinasyon ng High Level at Low Level Programming Language.
+
+import android.app.ProgressDialog //naglalaman ng high-level classes na maaaring matawag para sa pagbuo ng Android Application model, ang tinawag na class dito ay ProgressDialog
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
