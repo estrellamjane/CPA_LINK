@@ -1,5 +1,12 @@
 package com.erby.casestudy
 
+//In Layers of Programming Language, merong Machine, Assembly, High-Level and Low-Level Programming Language
+//Ang High Level Programming Language ay ginagamit para sa pagbuo ng program,
+//ang halimbawa nito ay C++, C#, JAVA, C, Visual Basic, and J#.
+//Habang ang low-level programming language naman ay ginagamit sa pagddesign.
+//Machine Language ay ang standard language na ginagamit ng computer upang magprocess ng mga data, ito ay ang binary.
+//Assembly naman ang kombinasyon ng High Level at Low Level Programming Language.
+
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -206,14 +213,14 @@ class registration : AppCompatActivity() {
     //a verification code will be sent kay user once na maayos nyang naisagawa ang pagreregister.
 
     }
-    fun clearInfo(){
-        lastname.text.clear()
-        firstname.text.clear()
-        businessAddress.text.clear()
-        emailAddress.text.clear()
-        tinNumber.text.clear()
-        password1.text.clear()
-        password2.text.clear()
+    fun clearInfo(){ //ma-clear ang mga current information na nakalagay sa input area 
+        lastname.text.clear() //clears the current lastname
+        firstname.text.clear() //clears the current firstname
+        businessAddress.text.clear() //clears the current Business Address
+        emailAddress.text.clear() //clears the current Email Address
+        tinNumber.text.clear() //clears the current Tin Number
+        password1.text.clear() //clears the current password
+        password2.text.clear() //clears the current second password
 
 
     }
