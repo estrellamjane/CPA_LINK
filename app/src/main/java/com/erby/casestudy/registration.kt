@@ -57,7 +57,7 @@ class registration : AppCompatActivity() {
         if(lastname.text.toString().isEmpty() && firstname.text.toString().isEmpty() &&
                 businessAddress.text.toString().isEmpty() && emailAddress.text.toString().isEmpty() &&
                 tinNumber.text.toString().isEmpty() && password1.text.toString().isEmpty() && password2.text.toString().isEmpty()){
-            lastname.error = "Required"
+            lastname.error = "Required" 
             firstname.error = "Required"
             businessAddress.error = "Required"
             emailAddress.error = "Required"
@@ -82,10 +82,9 @@ class registration : AppCompatActivity() {
             password1.error = "Password should be atleast 6 characters and above !"
             password1.requestFocus()
         }else if(!password1.text.toString().contentEquals(password2.text.toString())){
-            password2.error = "Invalid input ! Password mismatch"
+            password2.error = "Invalid input ! Password mismatch" //kapag mali ang inilagay ni user na password, ang system ay magpprompt ng "Invalid Input!"
             password2.requestFocus()
         }else{
-
       val prog= ProgressDialog.show(this,"Please Wait .. ","Processing..",true)
 
         val email = emailAddress.text.toString()
@@ -130,7 +129,9 @@ class registration : AppCompatActivity() {
         }// check inputs
     }
 
-
+    //on the above condition, pinapakita dito na kapag mali or walang input si user, they can't proceed sa susunod na parte ng registration
+    //yun ay ang pag-verify ni user ng account nya sa email nya
+    //a verification code will be sent kay user once na maayos nyang naisagawa ang pagreregister.
 
 
     fun createAccount(view: View){
@@ -198,7 +199,9 @@ class registration : AppCompatActivity() {
             password2.error = "Invalid input ! Password mismatch"
             password2.requestFocus()
         }
-
+    //on the above condition, pinapakita dito na kapag mali or walang input si user, they can't proceed sa susunod na parte ng registration
+    //yun ay ang pag-verify ni user ng account nya sa email nya
+    //a verification code will be sent kay user once na maayos nyang naisagawa ang pagreregister.
 
     }
     fun clearInfo(){
