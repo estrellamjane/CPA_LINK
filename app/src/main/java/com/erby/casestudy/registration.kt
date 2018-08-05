@@ -7,30 +7,30 @@ package com.erby.casestudy
 //Machine Language ay ang standard language na ginagamit ng computer upang magprocess ng mga data, ito ay ang binary.
 //Assembly naman ang kombinasyon ng High Level at Low Level Programming Language.
 
-import android.content.Intent
-import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
-import android.text.Html
-import android.view.View
-import android.widget.Toast
-import com.google.firebase.auth.AuthResult
-import kotlinx.android.synthetic.main.activity_main.*
-import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_registration.*
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.auth.FirebaseUser
+//IMPORT means dalhin o ikonek, we are trying to make a connection here, tinatawag natin ang mga resource classes na ginagamit upang makabuo ng isang application.
+import android.content.Intent //android.content-naglalaman ng mga classes na para sa pag-aaccess at pagbbulish ng data sa device na gagamitin
+import android.support.v7.app.AppCompatActivity //
+import android.os.Bundle //android.os-provider ng basic operating system service, passing of message and inter-process communication sa device
+import android.text.Html //android.text-ginagamit para sa pagrrender ng text and pag-aayos ng lay-out ng text sa device
+import android.view.View //android.view-handles the screen layout, kung ano yung nakikita ng user sa screen
+import android.widget.Toast //android.widget-mostly naglalaman ng UI elements, mga widget na maaaring makita ni user sa screen
+import com.google.firebase.auth.AuthResult //calls the database use in this app
+import kotlinx.android.synthetic.main.activity_main.* //
+import com.google.firebase.auth.FirebaseAuth //calls the database use in this app
+import kotlinx.android.synthetic.main.activity_registration.* //
+import com.google.firebase.database.DatabaseReference //calls the database use in this app
+import com.google.firebase.database.FirebaseDatabase //calls the database use in this app
+import com.google.firebase.auth.FirebaseUser //calls the database use in this app
 //import jdk.nashorn.internal.runtime.ECMAException.getException
 //import org.junit.experimental.results.ResultMatchers.isSuccessful
-import android.support.annotation.NonNull
-import android.support.v4.app.FragmentActivity
-import android.util.Log
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.gms.tasks.Task
-import android.app.ProgressDialog
-import android.support.v4.view.GravityCompat
-import kotlinx.android.synthetic.main.activity_home.*
-//import means dalhin o ikonek, we are trying to make a connection here, tinatawag natin ang mga resource classes na ginagamit upang makabuo ng isang application.
+import android.support.annotation.NonNull //
+import android.support.v4.app.FragmentActivity //
+import android.util.Log //android.util-//nagpprovide ng mga common utility methods such as date/time manipulation, base64 encoders and decoders, string and number conversion methods, and XML utilities
+import com.google.android.gms.tasks.OnCompleteListener //
+import com.google.android.gms.tasks.Task //
+import android.app.ProgressDialog //android.app-naglalaman ng high-level classes na maaaring matawag para sa pagbuo ng Android Application model
+import android.support.v4.view.GravityCompat //
+import kotlinx.android.synthetic.main.activity_home.* //
 
 class registration : AppCompatActivity() {
     private var mAuth: FirebaseAuth? = null
