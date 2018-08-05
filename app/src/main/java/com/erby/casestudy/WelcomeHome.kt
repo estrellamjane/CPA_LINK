@@ -55,7 +55,7 @@ class WelcomeHome : AppCompatActivity() {
     }
     fun signOut(view: View){
         val user = FirebaseAuth.getInstance().currentUser //ivvalidate ang current account ni user na illog-out
-        if(user!!.isEmailVerified && user != null){ //if the user and email is verified
+        if(user!!.isEmailVerified && user != null){ //if the user's email is verified
             Toast.makeText(this,"Successfully Logout! ", Toast.LENGTH_LONG).show() //an alert message will prompt/lalabas once na maayos na nakapag-log-out si user
             
            mAuth!!.signOut() //amethod to succesfully sign out the current account of user
