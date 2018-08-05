@@ -23,7 +23,7 @@ import com.google.android.gms.tasks.Task
 import android.app.ProgressDialog
 import android.support.v4.view.GravityCompat
 import kotlinx.android.synthetic.main.activity_home.*
-
+//import means dalhin o ikonek, we are trying to make a connection here, tinatawag natin ang mga resource classes na ginagamit upang makabuo ng isang application.
 
 class registration : AppCompatActivity() {
     private var mAuth: FirebaseAuth? = null
