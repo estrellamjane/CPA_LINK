@@ -1,6 +1,6 @@
 
 package com.erby.casestudy // name ng library package ay erby.casestudy 
-import android.app.Service // ito ay library package na kapag dineclare or tinawag, lahat ng attributes at classes ay pwede na din matawag at gamitin
+import android.app.Service //android.app-naglalaman ng high-level classes na maaaring matawag para sa pagbuo ng Android Application model
 import android.content.Context // ito ay library package na kapag dineclare or tinawag, lahat ng attributes at classes ay pwede na din matawag at gamitin
 import android.net.ConnectivityManager // ito ay library package na kapag dineclare or tinawag, lahat ng attributes at classes ay pwede na din matawag at gamitin
 import android.net.NetworkInfo // ito ay library package na kapag dineclare or tinawag, lahat ng attributes at classes ay pwede na din matawag at gamitin
