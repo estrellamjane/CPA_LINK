@@ -80,7 +80,7 @@ class registration : AppCompatActivity() {
             password2.error = "Required" //if the Second Password is empty, magpprompt or mag-aalert si error message
         } else if(password1.text.toString().length<6){
             password1.error = "Password should be atleast 6 characters and above !" //kapag kulang ang characters na ininput ni user, mag-aalert ang error message
-            password1.requestFocus()
+            password1.requestFocus() 
         }else if(!password1.text.toString().contentEquals(password2.text.toString())){
             password2.error = "Invalid input ! Password mismatch" //kapag mali ang inilagay ni user na password, ang system ay magpprompt ng "Invalid Input!"
             password2.requestFocus()
@@ -171,33 +171,35 @@ class registration : AppCompatActivity() {
         if(lastname.text.toString().isEmpty() && firstname.text.toString().isEmpty() &&
                 businessAddress.text.toString().isEmpty() && emailAddress.text.toString().isEmpty() &&
                 tinNumber.text.toString().isEmpty() && password1.text.toString().isEmpty() && password2.text.toString().isEmpty()){
-            lastname.error = "Required"
-            firstname.error = "Required"
-            businessAddress.error = "Required"
-            emailAddress.error = "Required"
-            tinNumber.error = "Required"
-            password1.error = "Required"
-            password2.error = "Required"
+            lastname.error = "Required" //if the last name is empty, magpprompt or mag-aalert si error message
+            firstname.error = "Required" //if the first name is empty, magpprompt or mag-aalert si error message
+            businessAddress.error = "Required" //if the Business Address is empty, magpprompt or mag-aalert si error message
+            emailAddress.error = "Required" //if the Email Adress is empty, magpprompt or mag-aalert si error message
+            tinNumber.error = "Required" //if the Tin Number is empty, magpprompt or mag-aalert si error message
+            password1.error = "Required" //if the Password is empty, magpprompt or mag-aalert si error message
+            password2.error = "Required" //if the Second Password is empty, magpprompt or mag-aalert si error message
         }else if(lastname.text.toString().isEmpty()){
-            lastname.error = "Required"
+            lastname.error = "Required" //if the last name is empty, magpprompt or mag-aalert si error message
         }else if(firstname.text.toString().isEmpty()){
-            firstname.error = "Required"
+            firstname.error = "Required" //if the first name is empty, magpprompt or mag-aalert si error message
         }else if(businessAddress.text.toString().isEmpty()){
-            businessAddress.error = "Required"
+            businessAddress.error = "Required" //if the Business Address is empty, magpprompt or mag-aalert si error message
         }else if(emailAddress.text.toString().isEmpty()){
-            emailAddress.error = "Required"
+            emailAddress.error = "Required" //if the Email Adress is empty, magpprompt or mag-aalert si error message
         }else if(tinNumber.text.toString().isEmpty()){
-            tinNumber.error = "Required"
+            tinNumber.error = "Required"  //if the Tin Number is empty, magpprompt or mag-aalert si error message
         }else if(password1.text.toString().isEmpty()){
-            password1.error = "Required"
+            password1.error = "Required" //if the Password is empty, magpprompt or mag-aalert si error message
         }else if(password2.text.toString().isEmpty()){
-            password2.error = "Required"
+            password2.error = "Required" //if the Second Password is empty, magpprompt or mag-aalert si error message
         } else if(password1.text.toString().length<6){
-            password1.error = "Password should be atleast 6 characters and above !"
-            password1.requestFocus()
+            password1.error = "Password should be atleast 6 characters and above !" //kapag ang length ng characters na ininput ni user ay hindi umabot sa 6 characters, magpprompt or mag-aalert si error message 
+            password1.requestFocus() //once na nag-error at after lumabas ni error message, magsstay lang ang focus sa current editText
+            //hindi na kelangan pang magpipindot-pindot ni user para lang ma-access muli yung ffill-upan
         }else if(!password1.text.toString().contentEquals(password2.text.toString())){
-            password2.error = "Invalid input ! Password mismatch"
-            password2.requestFocus()
+            password2.error = "Invalid input ! Password mismatch"//kapag hindi kaparehas ng naunang password,  magpprompt or mag-aalert si error message
+            password2.requestFocus() //once na nag-error at after lumabas ni error message, magsstay lang ang focus sa current editText
+            //hindi na kelangan pang magpipindot-pindot ni user para lang ma-access muli yung ffill-upan
         }
     //on the above condition, pinapakita dito na kapag mali or walang input si user, they can't proceed sa susunod na parte ng registration
     //yun ay ang pag-verify ni user ng account nya sa email nya
