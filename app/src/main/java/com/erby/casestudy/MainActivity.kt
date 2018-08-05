@@ -23,6 +23,7 @@ import com.erby.casestudy.R.id.emailaddress
 import android.graphics.Color.parseColor
 import android.support.v4.view.GravityCompat
 import kotlinx.android.synthetic.main.activity_home.*
+//import means dalhin o ikonek, we are trying to make a connection here, tinatawag natin ang mga resource classes na ginagamit upang makabuo ng isang application
 
 
 class MainActivity : AppCompatActivity() {
