@@ -57,35 +57,35 @@ class registration : AppCompatActivity() {
         if(lastname.text.toString().isEmpty() && firstname.text.toString().isEmpty() &&
                 businessAddress.text.toString().isEmpty() && emailAddress.text.toString().isEmpty() &&
                 tinNumber.text.toString().isEmpty() && password1.text.toString().isEmpty() && password2.text.toString().isEmpty()){
-            lastname.error = "Required" 
-            firstname.error = "Required"
-            businessAddress.error = "Required"
-            emailAddress.error = "Required"
-            tinNumber.error = "Required"
-            password1.error = "Required"
-            password2.error = "Required"
+            lastname.error = "Required" //if the lastname is empty, magpprompt or mag-aalert si error message
+            firstname.error = "Required" //if the firstname is empty, magpprompt or mag-aalert si error message
+            businessAddress.error = "Required" //if the Business Address is empty, magpprompt or mag-aalert si error message
+            emailAddress.error = "Required" //if the Email Address is empty, magpprompt or mag-aalert si error message
+            tinNumber.error = "Required" //if the Tin Number is empty, magpprompt or mag-aalert si error message
+            password1.error = "Required" //if the Password is empty, magpprompt or mag-aalert si error message
+            password2.error = "Required" //if the Second Password is empty, magpprompt or mag-aalert si error message
         }else if(lastname.text.toString().isEmpty()){
-            lastname.error = "Required"
+            lastname.error = "Required" //if the lastname is empty, magpprompt or mag-aalert si error message
         }else if(firstname.text.toString().isEmpty()){
-            firstname.error = "Required"
+            firstname.error = "Required" //if the firstname is empty, magpprompt or mag-aalert si error message
         }else if(businessAddress.text.toString().isEmpty()){
-            businessAddress.error = "Required"
+            businessAddress.error = "Required" //if the Business Address is empty, magpprompt or mag-aalert si error message
         }else if(emailAddress.text.toString().isEmpty()){
-            emailAddress.error = "Required"
+            emailAddress.error = "Required" //if the Email Address is empty, magpprompt or mag-aalert si error message
         }else if(tinNumber.text.toString().isEmpty()){
-            tinNumber.error = "Required"
+            tinNumber.error = "Required" //if the Tin Number is empty, magpprompt or mag-aalert si error message
         }else if(password1.text.toString().isEmpty()){
-            password1.error = "Required"
+            password1.error = "Required" //if the Password is empty, magpprompt or mag-aalert si error message
         }else if(password2.text.toString().isEmpty()){
-            password2.error = "Required"
+            password2.error = "Required" //if the Second Password is empty, magpprompt or mag-aalert si error message
         } else if(password1.text.toString().length<6){
-            password1.error = "Password should be atleast 6 characters and above !"
+            password1.error = "Password should be atleast 6 characters and above !" //kapag kulang ang characters na ininput ni user, mag-aalert ang error message
             password1.requestFocus()
         }else if(!password1.text.toString().contentEquals(password2.text.toString())){
             password2.error = "Invalid input ! Password mismatch" //kapag mali ang inilagay ni user na password, ang system ay magpprompt ng "Invalid Input!"
             password2.requestFocus()
         }else{
-      val prog= ProgressDialog.show(this,"Please Wait .. ","Processing..",true)
+      val prog= ProgressDialog.show(this,"Please Wait .. ","Processing..",true) //kapag walang maling input si user, a progress dialog will pop
 
         val email = emailAddress.text.toString()
         val password = password1.text.toString()
