@@ -16,6 +16,7 @@ import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_welcome_home.*
 import kotlinx.android.synthetic.main.app_bar_home.*
+//import means dalhin o ikonek, we are trying to make a connection here, tinatawag natin ang mga resource classes na ginagamit upang makabuo ng isang application
 
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -105,18 +106,26 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
     fun signOut(){
-        val user = FirebaseAuth.getInstance().currentUser
-        if(user!!.isEmailVerified){
-            Toast.makeText(this,"Successfully Logout! ", Toast.LENGTH_LONG).show()
-            mAuth!!.signOut()
-            finish()
-            startActivity(Intent(this,MainActivity::class.java))
+        val user = FirebaseAuth.getInstance().currentUser //ivvalidate ang current account ni user na illog-out
+        if(user!!.isEmailVerified){ //if the user's email is verified
+            Toast.makeText(this,"Successfully Logout! ", Toast.LENGTH_LONG).show() //an alert message will prompt/lalabas once na maayos na nakapag-log-out si user
+            mAuth!!.signOut() //amethod to succesfully sign out the current account of user
+            finish() //ang finish method ay para matawag ang onDestroy method, binubura nya ang activities na naganap once na tinawag
+            //ginagamit ang finish() upang hindi na magkaroon pa ng access ang iba once na matrigger, 
+            //for example, may ibang gagamit ng app, nag-log-out na muna si user, yung bagong gagamit ng app hindi na sya magkakaroon pa ng access sa account ni main user kahit na iclick nya ang back button.
+            startActivity(Intent(this,MainActivity::class.java)) //after ng finish, nag-initiate dito ng panibagong activity gamit ang startActivity,
+            //gumamit ng Intent class to initiate yung bagong activity na ipperform
+            //so ang ibig sabihin ay after mag log-out ni user , magreredirect ang program sa MainAtivity::class.java
         }
-        else if(!(user.isEmailVerified))
+        else if(!(user.isEmailVerified)) //if the user's email is not verified
         {
-            Toast.makeText(this,"Check your Email for verification ! ", Toast.LENGTH_LONG).show()
-            finish()
-            startActivity(Intent(this,MainActivity::class.java))
+            Toast.makeText(this,"Check your Email for verification ! ", Toast.LENGTH_LONG).show() //a message will prompt kapag hindi pa nakaverified ang account ni user 
+            finish() //ang finish method ay para matawag ang onDestroy method, binubura nya ang activities na naganap once na tinawag
+            //ginagamit ang finish() upang hindi na magkaroon pa ng access ang iba once na matrigger, 
+            //for example, may ibang gagamit ng app, nag-log-out na muna si user, yung bagong gagamit ng app hindi na sya magkakaroon pa ng access sa account ni main user kahit na iclick nya ang back button.
+            startActivity(Intent(this,MainActivity::class.java)) //after ng finish, nag-initiate dito ng panibagong activity gamit ang startActivity,
+            //gumamit ng Intent class to initiate yung bagong activity na ipperform
+            //so ang ibig sabihin ay after mag log-out ni user , magreredirect ang program sa MainAtivity::class.java
         }
 
     }
